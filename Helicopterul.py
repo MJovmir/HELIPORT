@@ -1,4 +1,4 @@
-# Helycopter 
+# Helicopter 
 
   # # # # # # # # # # 
   #                 # 
@@ -38,7 +38,6 @@
 
 
 SCALE  = 10
-
 hX = 5
 hY = 4
 
@@ -51,6 +50,8 @@ for y in range(SCALE):
             map += "# "
         elif x == hX and y == hY:
             map += "H "
+        elif x in [hX, hX+1, hX-1]  and y in [hY, hY+1, hY-1]:
+            map += "x "   
         else:
             map += "  "
 
